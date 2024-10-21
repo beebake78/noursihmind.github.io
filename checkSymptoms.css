@@ -1,0 +1,607 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(254, 250, 224);
+}
+.navs {
+  display: flex;
+  flex-direction: column; /* Stacks nav1 and nav2 vertically */
+}
+/* Styling for nav1 (top navigation) */
+.nav1 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  /* background-color: rgb(204, 213, 174); */
+}
+
+.webName {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: bolder;
+  font-size: 48px;
+  transition: transform 0.6s ease; /* Smooth transition for the zoom effect */
+  color: rgb(51, 51, 51);
+}
+.webName:hover {
+  cursor: pointer;
+  transform: scale(1.1); /* Zooms the element to 110% of its original size */
+}
+
+.search-container {
+  position: relative;
+  width: 40%; /* Adjust the width as per your requirements */
+}
+
+.search-container i {
+  position: absolute;
+  left: 20px; /* Adjust distance from the left as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  color: black; /* Adjust color of the icon */
+  background-color: rgb(250, 237, 206);
+}
+
+.search-bar {
+  width: 100%;
+  height: 68px;
+  padding: 10px 10px 10px 60px; /* Increased padding-left to create more space between the text and icon */
+  border: 1px solid transparent;
+  border-radius: 20px;
+  box-sizing: border-box; /* Include padding in the width */
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  background-color: rgb(250, 237, 206);
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: rgb(204, 213, 174); /* Optional: Change border color on focus */
+}
+
+.contact a {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  border: 1.5px, solid, rgb(204, 213, 174);
+  border-radius: 15px;
+  height: 68px;
+  width: 276px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.5s ease; /* Controls the transition effect */
+}
+
+.contact :hover {
+  cursor: pointer;
+  background-color: rgb(224, 229, 182);
+  border-radius: 10px;
+  color: rgb(1, 77, 1);
+}
+
+/* Styling for nav2 (bottom navigation) */
+.nav2 {
+  display: flex;
+  justify-content: left;
+  padding-left: 5.5%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  /* background-color: rgb(224, 229, 182); */
+}
+
+.nav2 a {
+  margin-right: 60px;
+  text-decoration: none;
+  color: black;
+  font-family: "poppins", sans-serif;
+  font-size: 20px;
+  /* background-color: rgb(224, 229, 182); */
+}
+
+.nav2 a:hover {
+  color: black;
+  /* font-weight: bold; */
+  transition: transform 1s ease; /* Smooth transition for the zoom effect */
+  transform: scale(1.1); /* Zooms the element to 110% of its original size */
+}
+.hamburger {
+  display: none; /* Hidden by default, will show in mobile view using media queries */
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  position: absolute; /* Positioning it at the top left */
+  left: 20px; /* Adjust this value to position it exactly at the left corner */
+  top: 20px; /* Adjust this value to position it from the top */
+}
+/* Mobile Styles */
+@media (max-width: 1100px) {
+  .nav1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    font-size: 15px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .webName {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .contact a {
+    display: flex;
+    padding: 10px;
+    font-size: 16px;
+    height: fit-content;
+    width: fit-content;
+    
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger button{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
+  .nav2 {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav2.active {
+    display: flex; /* Show links when active */
+  }
+
+  .nav2 a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+}
+.title {
+  background-color: rgb(224, 229, 182);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 15px;
+}
+.title h1 {
+  background-color: rgb(224, 229, 182);
+  font-family: "Abhaya Libre", serif;
+  font-size: 60px;
+}
+.eatingDisorder {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
+  background: linear-gradient(
+    to bottom,
+    rgb(224, 229, 182) 50%,
+    rgb(250, 237, 206) 50%
+  ); /* Green top, red bottom */
+  padding: 20px;
+  gap: 20px; /* Space between images */
+}
+
+.disorder {
+  text-align: center;
+  position: relative;
+  background: none; /* Remove any background around the images */
+  padding: 10px; /* Add some padding inside the box */
+  border: 2px solid transparent; /* Default border (transparent) */
+  transition: border 0.3s ease; /* Smooth transition for border */
+}
+
+.disorder:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 24px;
+}
+.disorder input[type="radio"] {
+  display: none; /* Hide radio buttons */
+}
+
+.disorder img {
+  height: 220px;
+  width: 220px;
+  object-fit: cover; /* Maintain aspect ratio */
+  cursor: pointer; /* Change cursor to pointer for selection */
+  background: none; /* Ensure no background around images */
+  border-radius: 24px;
+}
+
+.disorder .text {
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  background: none; /* Ensure no background for the text */
+}
+
+.disorder input[type="radio"]:checked + label .disorder {
+  border: 5px solid black; /* Highlight the whole box with a black border */
+}
+
+.eatingDisorder label {
+  display: block;
+  cursor: pointer;
+  background: none; /* Ensure label doesn't have a background */
+}
+
+.disorder input[type="radio"]:checked + label {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black; /* Highlight the entire disorder box */
+  border-radius: 24px;
+}
+
+@media (max-width: 1100px) {
+  .title {
+    height: 100px;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+  }
+  .title h1 {
+    font-size: 30px;
+  }
+  .eatingDisorder {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create 4 equal columns */
+    background: rgb(224, 229, 182);
+    padding: 15px;
+    gap: 0; /* Space between images */
+  }
+  
+.disorder img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover; /* Maintain aspect ratio */
+  cursor: pointer; /* Change cursor to pointer for selection */
+  background: none; /* Ensure no background around images */
+  border-radius: 0;
+}
+.disorder .text {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.disorder input[type="radio"]:checked + label {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border: 1px solid black; /* Highlight the entire disorder box */
+  border-radius: 10px;
+}
+.disorder input[type="radio"]:checked + label .disorder {
+  border: 1px solid black; /* Highlight the whole box with a black border */
+}
+}
+body {
+  font-family: "poppins", sans-serif;
+  text-align: center;
+  background-color: rgb(250, 237, 206);
+}
+#Question1{
+  margin-top: 100px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  background-color: rgb(250, 237, 206);
+}
+.label {
+  font-weight: 600;
+  font-size: 26px;
+  margin: 0 30px;
+  background-color: rgb(250, 237, 206);
+}
+.label.agree {
+  color: #0c7709;
+}
+.label.disagree {
+  color: #ec5454;
+}
+.circle {
+  background-color: rgb(250, 237, 206);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.circle.agree {
+  border-color: green;
+}
+.circle.disagree {
+  border-color: red;
+}
+.circle.purple {
+  border-color: black;
+}
+.circle.large {
+  width: 80px;
+  height: 80px;
+}
+
+.circle.medium {
+  width: 60px;
+  height: 60px;
+}
+
+.circle.small {
+  width: 40px;
+  height: 40px;
+}
+
+.circle.tiny {
+  width: 20px;
+  height: 20px;
+}
+
+.question {
+  background-color: rgb(250, 237, 206);
+  font-weight: 600;
+  font-size: 26px;
+  margin-top: 90px;
+}
+#Question10-Row{
+  margin-bottom: 90px;
+}
+
+.check-symptoms{
+  background-color: rgb(250, 237, 206) ;
+  margin-bottom: 100px;
+}
+.check-symptoms button{
+  height: 68px;
+  width: 222px;
+  border: 1px solid  rgb(204, 213, 174);
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  background-color:  rgb(254, 250, 224);
+  margin: auto; /* Centers the button within its container */
+  transition: background-color 0.5s ease; /* Controls the trafonnsition effect */
+  font-weight: 400;
+}
+
+.check-symptoms button:hover{
+  cursor: pointer;
+  background-color:rgb(224, 229, 182) ;
+  border-radius: 10px;
+  color: rgb(1, 77, 1);
+}
+
+@media (max-width: 1100px) {
+  #Question1{
+    margin-top: 50px;
+  }
+  #Question10-Row{
+    margin-bottom: 50px;
+  }
+.row {
+  margin: 10px;
+  flex-direction: column;
+}
+.label {
+  font-weight: normal;
+  font-size: 16px;
+  margin: 10px;
+}
+.circle.large {
+  margin: 5px;
+}
+
+.circle.medium {
+  margin: 5px;
+}
+
+.circle.small {
+  margin: 5px;
+}
+
+.circle.tiny {
+  margin: 5px;
+}
+
+.check-symptoms{
+  margin-bottom: 50px;
+}
+.check-symptoms button{
+  height: 68px;
+  width: 222px;
+  border: 1px solid  rgb(204, 213, 174);
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  background-color:  rgb(254, 250, 224);
+  margin: auto; /* Centers the button within its container */
+  transition: background-color 0.5s ease; /* Controls the trafonnsition effect */
+  font-weight: 400;
+}
+}
+footer {
+  display: flex;
+  justify-content: space-around; /* Distribute the items with space between */
+  padding: 20px; /* Optional padding */
+  background-color: #ccd5ae;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-card {
+  width: fit-content;
+  text-align: left;
+  background-color: rgb(204, 213, 174);
+  margin-top: 4rem;
+}
+
+.footer-card a {
+  display: block;
+  background-color: rgb(204, 213, 174);
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-card p {
+  display: block;
+  background-color: transparent;
+  font-size: 18px;
+  color: black;
+}
+
+.footer-card h3 {
+  display: block;
+  background-color: transparent;
+  margin-bottom: 1rem;
+  font-style: "poppins";
+  font-size: 28px;
+}
+
+.footer-card span {
+  display: flex;
+  align-items: center; /* Align the icon and text vertically */
+  margin-bottom: 10px; /* Add space between each contact detail */
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 16px; /* Adjust the font size if needed */
+  background-color: transparent;
+}
+
+.footer-card i {
+  margin-right: 15px; /* Add space between the icon and text */
+  font-size: 18px; /* Adjust the icon size if needed */
+  color: black; /* Adjust icon color */
+  background-color: transparent;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(204, 213, 174);
+  padding: 3rem;
+  color: black;
+}
+.footer-bottom div {
+  background-color: rgb(204, 213, 174);
+}
+.icons i {
+  background-color: rgb(254, 250, 224);
+  border-radius: 50%;
+  padding: 6px;
+  margin-right: 3px;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.icons i:hover {
+  cursor: pointer;
+}
+#CheckYourSymptoms {
+  font-weight: bolder;
+}
+
+
+@media (max-width: 1100px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px; /* Optional padding */
+    background-color: #ccd5ae; 
+    font-family: 'Poppins', sans-serif;
+  } 
+  
+  .footer-card {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(204, 213, 174); 
+    margin-top: 20px;
+  }
+  
+  .footer-card a{
+    display: block;
+    background-color: rgb(204, 213, 174); 
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .footer-card p{
+    display: block;
+    background-color: transparent;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .footer-card h3{
+    display: block;
+    background-color: transparent;
+    margin-bottom: 1px;
+    font-style: 'poppins';
+    font-size: 20px;
+  }
+  
+  .footer-card span {
+    display: flex;
+    align-items: center; /* Align the icon and text vertically */
+    justify-content: center; /* Center the content horizontally */
+    margin-bottom: 1px; /* Add space between each contact detail */
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 14px; /* Adjust the font size if needed */
+    background-color: transparent;
+  }
+  
+  .footer-card i {
+    margin-right: 15px; /* Add space between the icon and text */
+    font-size: 15px; /* Adjust the icon size if needed */
+    color: black; /* Adjust icon color */
+    background-color: transparent;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(204, 213, 174); ;
+    padding: 10px;
+    color: black;
+  }
+
+  .footer-bottom div{
+    background-color: rgb(204, 213, 174); 
+  }
+  .icons i{
+    background-color: rgb(254, 250, 224); 
+    border-radius: 50%;
+    padding: 6px;
+    margin-right: 3px;
+    margin-bottom: 2px;
+    margin-top: 4px;
+  }
+}

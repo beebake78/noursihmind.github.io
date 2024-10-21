@@ -1,0 +1,585 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(254, 250, 224);
+}
+.navs {
+  display: flex;
+  flex-direction: column; /* Stacks nav1 and nav2 vertically */
+}
+/* Styling for nav1 (top navigation) */
+.nav1 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  /* background-color: rgb(204, 213, 174); */
+}
+
+.webName {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: bolder;
+  font-size: 48px;
+  transition: transform 0.6s ease; /* Smooth transition for the zoom effect */
+  color: rgb(51, 51, 51);
+}
+.webName:hover {
+  cursor: pointer;
+  transform: scale(1.1); /* Zooms the element to 110% of its original size */
+}
+
+.search-container {
+  position: relative;
+  width: 40%; /* Adjust the width as per your requirements */
+}
+
+.search-container i {
+  position: absolute;
+  left: 20px; /* Adjust distance from the left as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  color: black; /* Adjust color of the icon */
+  background-color: rgb(250, 237, 206);
+}
+
+.search-bar {
+  width: 100%;
+  height: 68px;
+  padding: 10px 10px 10px 60px; /* Increased padding-left to create more space between the text and icon */
+  border: 1px solid transparent;
+  border-radius: 20px;
+  box-sizing: border-box; /* Include padding in the width */
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  background-color: rgb(250, 237, 206);
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: rgb(204, 213, 174); /* Optional: Change border color on focus */
+}
+
+.contact a {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  border: 1.5px, solid, rgb(204, 213, 174);
+  border-radius: 15px;
+  height: 68px;
+  width: 276px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.5s ease; /* Controls the transition effect */
+}
+
+.contact :hover {
+  cursor: pointer;
+  background-color: rgb(224, 229, 182);
+  border-radius: 10px;
+  color: rgb(1, 77, 1);
+}
+
+/* Styling for nav2 (bottom navigation) */
+.nav2 {
+  display: flex;
+  justify-content: left;
+  padding-left: 5.5%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  /* background-color: rgb(224, 229, 182); */
+}
+
+.nav2 a {
+  margin-right: 60px;
+  text-decoration: none;
+  color: black;
+  font-family: "poppins", sans-serif;
+  font-size: 20px;
+  /* background-color: rgb(224, 229, 182); */
+}
+
+.nav2 a:hover {
+  color: black;
+  /* font-weight: bold; */
+  transition: transform 1s ease; /* Smooth transition for the zoom effect */
+  transform: scale(1.1); /* Zooms the element to 110% of its original size */
+}
+.hamburger {
+  display: none; /* Hidden by default, will show in mobile view using media queries */
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  position: absolute; /* Positioning it at the top left */
+  left: 20px; /* Adjust this value to position it exactly at the left corner */
+  top: 20px; /* Adjust this value to position it from the top */
+}
+/* Mobile Styles */
+@media (max-width: 1100px) {
+  .nav1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    font-size: 15px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .webName {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .contact a {
+    display: flex;
+    padding: 10px;
+    font-size: 16px;
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger button {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
+  .nav2 {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav2.active {
+    display: flex; /* Show links when active */
+  }
+
+  .nav2 a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+}
+#ABOUTUS {
+  font-weight: bolder;
+}
+
+.title-aboutus {
+  height: 308px;
+  width: 100%;
+  background-color: rgb(224, 229, 182);
+  display: flex; /* Set the parent container to flex */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.title-aboutus h1 {
+  font-size: 60px;
+  font-family: "Abhaya Libre", serif;
+  background-color: transparent;
+  position: relative; /* Establishes a positioning context for the pseudo-element */
+}
+
+.title-aboutus h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust this value to move the underline further away from the text */
+  width: 100%;
+  height: 2px; /* Set the desired thickness of the underline */
+  background-color: black; /* Set the color of the underline   top, right, bottom and left*/
+}
+.content-aboutus {
+  height: fit-content;
+  width: 100vw;
+}
+.content-aboutus p {
+  font-family: "poppins", serif;
+  font-size: 24px;
+  padding: 5% 10% 5% 10%;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .title-aboutus {
+    height: 150px;
+  }
+  .title-aboutus h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .title-aboutus h1::after {
+    height: 1px; /* Set the desired thickness of the underline */
+  }
+  .content-aboutus p {
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+
+.ourmission {
+  height: fit-content;
+  width: 100%;
+  display: flex; /* Use flexbox to easily align items */
+  flex-direction: column; /* Arrange elements in a column */
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  padding: 5% 10%; /* Add some padding for spacing */
+  background-color: rgb(250, 237, 206);
+}
+
+.ourmission h1 {
+  font-family: "Abhaya Libre", serif;
+  text-align: center;
+  font-size: 60px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  background-color: rgb(250, 237, 206);
+}
+.ourmission h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+.ourmission p {
+  font-family: "Poppins", serif;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px; /* Add some space between the h1 and the paragraph */
+  background-color: rgb(250, 237, 206);
+}
+
+.resources {
+  background-color: transparent;
+}
+.resources h1 {
+  padding-top: 100px;
+}
+.resources h2 {
+  background-color: rgb(250, 237, 206);
+  padding-top: 50px;
+  font-family: "poppins", sans-serif;
+}
+
+.resources li {
+  background-color: rgb(250, 237, 206);
+}
+
+.resources li::marker {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.resources ul p {
+  text-align: left;
+}
+.resources ul {
+  background-color: rgb(250, 237, 206);
+}
+@media (max-width: 1100px) {
+  .ourmission h1 {
+    font-size: 30px;
+    padding-bottom: 1px;
+  }
+  .ourmission h1::after {
+    height: 1px;
+  }
+  
+  .ourmission p {
+    font-size: 16px;
+    text-align: justify;
+  }
+  .ourmission h2{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .resources h1 {
+    padding-top: 50px;
+  }
+}
+.ourteam {
+  height: fit-content;
+  width: 100%;
+  display: flex; /* Use flexbox to easily align items */
+  flex-direction: column; /* Arrange elements in a column */
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  padding: 5% 10%; /* Add some padding for spacing */
+}
+.ourteam h1 {
+  font-family: "Abhaya Libre", serif;
+  text-align: center;
+  font-size: 60px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.ourteam h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+.ourteam p {
+  font-family: "Poppins", serif;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px; /* Add some space between the h1 and the paragraph */
+}
+
+
+@media (max-width: 1100px) {
+  .ourteam h1 {
+    font-size: 30px;
+    padding-bottom: 1px;
+  }
+  .ourteam h1::after {
+    height: 1px;
+  }
+  .ourteam p {
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+.ourvision {
+  height: fit-content;
+  width: 100%;
+  display: flex; /* Use flexbox to easily align items */
+  flex-direction: column; /* Arrange elements in a column */
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  padding: 5% 10% 10% 10%; /* Add some padding for spacing */
+  background-color: rgb(250, 237, 206);
+}
+.ourvision h1 {
+  font-family: "Abhaya Libre", serif;
+  text-align: center;
+  font-size: 60px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  background-color: rgb(250, 237, 206);
+}
+.ourvision h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+.ourvision p {
+  font-family: "Poppins", serif;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px; /* Add some space between the h1 and the paragraph */
+  background-color: rgb(250, 237, 206);
+}
+
+@media (max-width: 1100px) {
+  .ourvision h1 {
+    font-size: 30px;
+    padding-bottom: 1px;
+  }
+  .ourvision h1::after {
+    height: 1px;
+  }
+  
+  .ourvision p {
+    font-family: "Poppins", serif;
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-around; /* Distribute the items with space between */
+  padding: 20px; /* Optional padding */
+  background-color: #ccd5ae;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-card {
+  width: fit-content;
+  text-align: left;
+  background-color: rgb(204, 213, 174);
+  margin-top: 4rem;
+}
+
+.footer-card a {
+  display: block;
+  background-color: rgb(204, 213, 174);
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-card p {
+  display: block;
+  background-color: transparent;
+  font-size: 18px;
+  color: black;
+}
+
+.footer-card h3 {
+  display: block;
+  background-color: transparent;
+  margin-bottom: 1rem;
+  font-style: "poppins";
+  font-size: 28px;
+}
+
+.footer-card span {
+  display: flex;
+  align-items: center; /* Align the icon and text vertically */
+  margin-bottom: 10px; /* Add space between each contact detail */
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 16px; /* Adjust the font size if needed */
+  background-color: transparent;
+}
+
+.footer-card i {
+  margin-right: 15px; /* Add space between the icon and text */
+  font-size: 18px; /* Adjust the icon size if needed */
+  color: black; /* Adjust icon color */
+  background-color: transparent;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(204, 213, 174);
+  padding: 3rem;
+  color: black;
+}
+.footer-bottom div {
+  background-color: rgb(204, 213, 174);
+}
+.icons i {
+  background-color: rgb(254, 250, 224);
+  border-radius: 50%;
+  padding: 6px;
+  margin-right: 3px;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+.icons i:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px; /* Optional padding */
+    background-color: #ccd5ae;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .footer-card {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(204, 213, 174);
+    margin-top: 20px;
+  }
+
+  .footer-card a {
+    display: block;
+    background-color: rgb(204, 213, 174);
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .footer-card p {
+    display: block;
+    background-color: transparent;
+    font-size: 14px;
+    color: black;
+  }
+
+  .footer-card h3 {
+    display: block;
+    background-color: transparent;
+    margin-bottom: 1px;
+    font-style: "poppins";
+    font-size: 20px;
+  }
+
+  .footer-card span {
+    display: flex;
+    align-items: center; /* Align the icon and text vertically */
+    justify-content: center; /* Center the content horizontally */
+    margin-bottom: 1px; /* Add space between each contact detail */
+    font-family: "Poppins", sans-serif;
+    color: black;
+    font-size: 14px; /* Adjust the font size if needed */
+    background-color: transparent;
+  }
+
+  .footer-card i {
+    margin-right: 15px; /* Add space between the icon and text */
+    font-size: 15px; /* Adjust the icon size if needed */
+    color: black; /* Adjust icon color */
+    background-color: transparent;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(204, 213, 174);
+    padding: 10px;
+    color: black;
+  }
+
+  .footer-bottom div {
+    background-color: rgb(204, 213, 174);
+  }
+  .icons i {
+    background-color: rgb(254, 250, 224);
+    border-radius: 50%;
+    padding: 6px;
+    margin-right: 3px;
+    margin-bottom: 2px;
+    margin-top: 4px;
+  }
+}
+/*COLOR 
+#CCD5AE rgb(204, 213, 174)
+#EOE5B6 rgb(224, 229, 182)
+#FAEDCE rgb(250, 237, 206)
+#FEFAEO rgb(254, 250, 224)
+*/

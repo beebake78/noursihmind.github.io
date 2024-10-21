@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs</title>
+  <link rel="stylesheet" href="blog.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap" rel="stylesheet">
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<body>
+  
+  <div class="navs">
+    <nav class="nav1">
+      <div class="webName" onclick="window.location.href='index.html';">NourishMind</div>
+      <div class="search-container">
+        <i class="fa fa-search"></i> <!-- Add a search icon using Font Awesome or an SVG -->
+        <input class="search-bar" type="search" placeholder="How can I help you?" />
+      </div>
+
+      <div class="contact">
+        <a href="contactus.html">Contact a professional</a>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">&#9776;</button> <!-- Hamburger icon -->
+
+    </nav>
+
+    <nav class="nav2">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="blog.html" id="BLOG">Blog</a>
+      <a href="chechSymptoms.html">Check Your Symptoms</a>
+      <a href="contactus.html">Contact Us</a>
+    </nav>
+  </div>
+
+
+  <div class="title-blog">
+    <h1> Our Blogs</h1>
+   </div>
+   <div class="blogs-contents">
+    <div class="blog-card" onclick="window.location.href='AnorexiaNervosa.html';">
+      <div> <img src="image\AN2.webp" alt="Anorexia Nervosa"></div>
+      <div class="title-blogs" > Anorexia Nervosa</div>
+      <div class="info-blogs"> Anorexia Nervosa is a serious eating disorder characterized by an intense fear of gaining weight and a distorted body image. Individuals with anorexia tend to severely restrict their food intake, often to the point of starvation, even when they are underweight.
+        </div>
+    </div>
+
+    <div class="blog-card" onclick="window.location.href='BulimiaNervosa.html';">
+      <div> <img src="image\BN2.webp" alt="Bulimia Nervosa"></div>
+      <div class="title-blogs"> Bulimia Nervosa </div>
+      <div class="info-blogs"> Bulimia Nervosa is an eating disorder characterized by cycles of binge eating followed by compensatory behaviors to prevent weight gain, such as vomiting, fasting, or excessive exercise. Unlike anorexia, individuals with bulimia often maintain a normal weight, making it harder to detect.
+       </div>
+    </div>
+
+    <div class="blog-card" onclick="window.location.href='BED.html';">
+      <div> <img src="image\BED2.webp" alt="Binge Eating Disorder"></div>
+      <div class="title-blogs"> Binge Eating Disorder (BED)</div>
+      <div class="info-blogs"> Binge Eating Disorder (BED) is the most common eating disorder and is characterized by regular episodes of eating unusually large amounts of food in a short time, often feeling unable to stop. Unlike bulimia, individuals with BED do not engage in compensatory behaviors like purging after a binge.
+
+      </div>
+    </div>
+
+    <div class="blog-card" onclick="window.location.href='ARFID.html';">
+      <div> <img src="image\AFRID2.webp" alt="Restrictive Food intake Disorder"></div>
+      <div class="title-blogs"> Avoidant / Restrictive Food intake Disorder (ARFID) </div>
+      <div class="info-blogs"> Avoidant/Restrictive Food Intake Disorder (ARFID) is a relatively new diagnosis that involves eating disturbances that are not related to concerns about body image or weight, but instead a lack of interest in food or a fear of certain foods due to sensory sensitivities or fear of choking or vomiting. 
+        </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-card">
+      <h3> NourishMind</h3> <!-- Changed title to h3 -->
+      <p> Nourish Your Mind,<br>Transform Your Life</p>
+    </div>
+
+    <div class="footer-card">
+      <h3> Links </h3> <!-- Changed title to h3 -->
+      <a href="index.html"> Home</a>
+      <a href="aboutus.html"> About Us</a>
+      <a href="blog.html"> Informative Blogs</a>
+      <a href="chechSymptoms.html"> Check your symptoms</a>
+      <a href="contactus.html"> Contact Us </a>
+    </div>
+
+    <div class="footer-card" id="footer-card-contact">
+      <h3> Contact</h3> <!-- Changed title to h3 -->
+      <span><i class="fa-solid fa-phone"></i>  +14 5464 8272 </span>
+      <span><i class="fa-regular fa-envelope-open"></i> nourishmind@gmail.com</span>
+        <span><i class="fa-solid fa-location-crosshairs"></i> Putalisadak, Kathmandu</span>
+    </div>
+    <script src="toogleMenu.js"> </script>
+
+  </footer>
+ 
+  <div class="footer-bottom">
+
+    <div class="icons">
+      <i class="fa-brands fa-square-instagram" style="color: #000000;"></i>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-linkedin"></i>
+    </div>
+    <div> Terms and conditions</div>
+    <div> copyright 2023 @madat all right reserved</div>
+
+
+  </div>
+
+
+</body>
+</html>

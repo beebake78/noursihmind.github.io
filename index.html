@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+    <link rel="stylesheet" href="index.css">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+  </head>
+
+  <body>
+   
+    
+    <div class="main-container">
+      <div class="navs">
+        <nav class="nav1">
+          <div class="webName" onclick="location.reload()">NourishMind</div>
+          <div class="search-container">
+            <i class="fa fa-search"></i>
+            <input
+              class="search-bar"
+              type="search"
+              placeholder="How can I help you?"
+            />
+          </div>
+
+          <div class="contact">
+            <a href="contactus.html">Contact a professional</a>
+          </div>
+              <button class="hamburger" onclick="toggleMenu()">&#9776;</button> 
+
+        </nav>
+
+        <nav class="nav2">
+          <a href="index.html" id="HOMEPAGE">Home</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="blog.html">Blog</a>
+          <a href="chechSymptoms.html">Check Your Symptoms</a>
+          <a href="contactus.html">Contact Us</a>
+        </nav>
+      </div>
+
+      <div id="LandingImage">
+        <img src="image\personEating.jpg" alt="About Food" >
+        <div class="textAboveImage">
+          <div class="textImage">
+            <a href="ARFID.html ">
+              Avoidant / Restrictive Food Intake Disorder (ARFID)
+            </a>
+          </div>
+          <div class="textImage">
+            <a href="AnorexiaNervosa.html"> Anorexia Nervosa </a>
+          </div>
+          <div class="textImage">
+            <a href="BulimiaNervosa.html"> Bulimia Nervosa </a>
+          </div>
+          <div class="textImage">
+            <a href="BED.html"> Binge Eating Disorder (BED) </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aboutus-mainDiv">
+        <div class="aboutus-textdiv">
+          <h1 class="aboutus">About Us</h1>
+          <p class="aboutus-text">
+            Welcome to NourishMind At NourishMind, we are dedicated to raising
+             awareness about eating disorders and promoting mental health.
+          </p>
+          <a href="aboutus.html" style="text-decoration: none">
+            <button>Learn More</button>
+          </a>
+        </div>
+        <div class="image-aboutus">
+          <img src="image\LandingImage.jpg" alt="About Us" >
+        </div>
+      </div>
+
+      <div class="mission">
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to provide valuable resources, support, and guidance for individuals and families 
+          affected by eating disorder. Together, we can foster understanding, compassion, and recovery.
+        </p>
+      </div>
+
+      <div class="blogs">
+        <div class="heading-blogs">
+          <h1>Blogs</h1>
+          <a href="blog.html" style="text-decoration: none;">
+            <button>View more Blogs</button>
+          </a> 
+        </div>
+
+        <div class="blogs-contents">
+          <div
+            class="blog-card"
+            onclick="window.location.href='/HTML/Blogs/AnorexiaNervosa.html';"
+          >
+            <div>
+              <img src="image\AN.webp"alt="Anorexia Nervosa" >
+            </div>
+            <div class="title-blogs">Anorexia Nervosa</div>
+            <div class="info-blogs">
+              Characterized by an intense fear of gaining weight and a distorted body image, 
+              leading to severe food restriction.
+            </div>
+          </div>
+
+          <div
+            class="blog-card"
+            onclick="window.location.href='/HTML/Blogs/BulimiaNervosa.html';"
+          >
+            <div>
+              <img src="image\BN.webp" alt="Bulimia Nervosa" >
+            </div>
+            <div class="title-blogs">Bulimia Nervosa</div>
+            <div class="info-blogs">
+              Involves cycles of binge eating followed by compensatory behaviors, 
+              such as purging or excessive exercise.
+            </div>
+          </div>
+
+          <div
+            class="blog-card"
+            onclick="window.location.href='BED.html';"
+          >
+            <div>
+              <img src="image\BED.webp" alt="Binge Eating Disorder" >
+            </div>
+            <div class="title-blogs">Binge Eating Disorder (BED)</div>
+            <div class="info-blogs">
+              Involves episodes of consuming large quantities of food without control, 
+              often leading to feelings of guilt or shame.
+            </div>
+          </div>
+
+          <div
+            class="blog-card"
+            onclick="window.location.href='ARFID.html';"
+          >
+            <div>
+              <img
+                src="image\AFRID.webp"
+                alt="Avoidant / Restrictive Food Intake Disorder"
+              />
+            </div>
+            <div class="title-blogs">
+              Avoidant / Restrictive Food intake Disorder (ARFID)
+            </div>
+            <div class="info-blogs">
+              A condition where individuals avoid certain foods or food groups, 
+              often resulting in nutritional deficiencies.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="check-symptoms">
+        <h1>check your Symptoms</h1>
+        <h6>Take a short quiz and self analyze about any eating disorders.</h6>
+        <a href="chechSymptoms.html" >
+          <button>Take Quiz</button>
+        </a>
+      </div>
+
+      
+    <script src="toogleMenu.js"> </script>
+      <footer>
+        <div class="footer-card">
+          <h3>NourishMind</h3>
+          <!-- Changed title to h3 -->
+          <p>Nourish Your Mind,<br />Transform Your Life</p>
+        </div>
+
+        <div class="footer-card">
+          <h3>Links</h3>
+          <!-- Changed title to h3 -->
+          <a href="index.html"> Home</a>
+          <a href="aboutus.html"> About Us</a>
+          <a href="Blogs/blog.html"> Informative Blogs</a>
+          <a href="chechSymptoms.html"> Check your symptoms</a>
+          <a href="contactus.html"> Contact Us </a>
+        </div>
+
+        <div class="footer-card" id="footer-card-contact">
+          <h3>Contact</h3>
+          <!-- Changed title to h3 -->
+          <span><i class="fa-solid fa-phone"></i> +14 5464 8272 </span>
+          <span
+            ><i class="fa-regular fa-envelope-open"></i>
+            nourishmind@gmail.com</span
+          >
+          <span
+            ><i class="fa-solid fa-location-crosshairs"></i> Putalisadak,
+            Kathmandu</span
+          >
+        </div>
+      </footer>
+
+      <div class="footer-bottom">
+        <div class="icons">
+          <i class="fa-brands fa-square-instagram" style="color: #000000"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <div>Terms and conditions</div>
+        <div>copyright 2023 @madat all right reserved</div>
+      </div>
+    </div>
+
+    
+    
+  </body>
+</html>

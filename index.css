@@ -1,0 +1,730 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(254, 250, 224);
+}
+
+#HOMEPAGE {
+  font-weight: bolder;
+}
+
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(254, 250, 224); /* Light background */
+  color: #333; /* Text color */
+}
+
+/* Main container for navs */
+.navs {
+  display: flex;
+  flex-direction: column; 
+}
+
+.nav1 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.webName {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: bolder;
+  font-size: 48px;
+  transition: transform 0.6s ease; 
+}
+
+.webName:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+}
+
+.search-container {
+  position: relative;
+  width: 40%; 
+}
+
+.search-container i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black; 
+  background-color: antiquewhite;
+}
+
+.search-bar {
+  width: 100%;
+  height: 68px;
+  padding: 10px 10px 10px 60px; 
+  border: 1px solid transparent;
+  border-radius: 20px;
+  box-sizing: border-box; 
+  font-size: 20px;
+  background-color: rgb(250, 237, 206); 
+}
+.search-bar:focus {
+  outline: none;
+  border-color: rgb(204, 213, 174); 
+}
+.contact a {
+  font-size: 20px;
+  color: black;
+  border: 1.5px solid rgb(204, 213, 174);
+  border-radius: 15px;
+  height: 68px;
+  width: 276px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+}
+.contact a:hover {
+  background-color: rgb(224, 229, 182);
+  color: rgb(1, 77, 1);
+}
+/* Bottom navigation (nav2) */
+.nav2 {
+  display: flex;
+  justify-content: left;
+  padding-left: 5.5%;
+  padding-top: 25px;
+  margin-bottom: 20px;
+}
+.nav2 a {
+  margin-right: 60px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+.nav2 a:hover {
+  transform: scale(1.1); /* Hover zoom effect */
+}
+.nav2 a.active {
+  font-weight: bold;
+}
+.hamburger {
+  display: none; /* Hidden by default, will show in mobile view using media queries */
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  position: absolute; 
+  left: 20px; 
+  top: 20px; 
+}
+/* Mobile Styles */
+@media (max-width: 1100px) {
+  .nav1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-container {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .search-bar {
+    font-size: 15px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .webName {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .contact a {
+    display: flex;
+    padding: 10px;
+    font-size: 16px;
+    height: fit-content;
+    width: fit-content;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger button{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
+  .nav2 {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav2.active {
+    display: flex; /* Show links when active */
+  }
+  .nav2 a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+}
+
+#LandingImage {
+  position: relative; /* Ensures the textAboveImage can be positioned over the image */
+  width: 100%; /* Ensures container takes full width */
+  margin-bottom: 70px;
+}
+
+#LandingImage img {
+  width: 100%; /* Image takes full width of the container */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes any extra space around the image */
+}
+
+.textAboveImage {
+  position: absolute; /* Allows the text to overlay the image */
+  bottom: 0; /* Anchors the text container at the bottom of the image */
+  left: 0;
+  width: 100%;
+  display: flex; /* Organizes the text elements */
+  justify-content: space-evenly; /* Centers the text horizontally */
+  align-items: flex-end; /* Aligns text at the bottom */
+  padding-bottom: 10%; /* Adds some space from the bottom of the image */
+  font-size: 20px; /* Adjust font size as needed */
+  font-family: 'poppins' sans-serif;
+  background-color: transparent;
+}
+
+.textImage  {
+  background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background for text */
+  padding: 10px;
+  margin: auto;
+  border: 1px solid rgb(204, 213, 174);
+  border-radius: 15px;
+} 
+.textImage a {
+  text-decoration: none; /* No underline */
+  background-color: transparent;  
+  color: white; /* Ensures the text is visible */
+}
+.textImage a:hover{
+  color: black;
+}
+
+.textImage:hover{
+  background-color:rgb(224, 229, 182);
+  border-color: black;
+  cursor: pointer;
+  /* zoom: 1.1; */
+  transition: ease-in-out ;
+  transition-duration: 1s;
+}
+
+@media (max-width: 1100px) {
+  #LandingImage {
+    position: relative; /* Ensures the textAboveImage can be positioned over the image */
+    width: 100%; /* Ensures container takes full width */
+    margin-bottom: 30px;
+  }
+  
+  #LandingImage img {
+    width: 100%; /* Image takes full width of the container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes any extra space around the image */
+  }
+  
+  .textAboveImage {
+    position: absolute; /* Allows the text to overlay the image */
+    bottom: 0; /* Anchors the text container at the bottom of the image */
+    left: 0;
+    width: 100%;
+    display: flex; /* Organizes the text elements */
+    justify-content: space-evenly; /* Centers the text horizontally */
+    align-items: flex-end; /* Aligns text at the bottom */
+    padding-bottom: 50px; /* Adds some space from the bottom of the image */
+    font-size: 1px; /* Adjust font size as needed */
+    font-family: 'poppins' sans-serif;
+    background-color: transparent;
+  }
+  
+  .textImage  {
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background for text */
+    padding: 5px;
+    margin: auto;
+    border: 0.5px solid rgb(204, 213, 174);
+    border-radius: 0;
+    font-size: 10px; /* Reduce font size for smaller screens */
+
+  } 
+}
+
+
+.aboutus-mainDiv {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: fit-content;
+  /* justify-content: space-evenly; */
+  margin-bottom: 70px;
+}
+.aboutus-textdiv {
+  width: 50%;
+  padding-left: 10%;
+}
+.aboutus{
+  font-size: 67px;
+}
+
+.aboutus-text {
+  text-align: left;
+  margin: 20px 0 20px 0;
+  font-size: 30px;
+}
+
+.image-aboutus {
+  width: 30%;
+  padding-right: 10%;
+  padding-left: 10%;
+  
+}
+.image-aboutus img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the entire image fits in the div */
+border-radius: 30px;
+}
+
+.aboutus-textdiv button { 
+  height: 68px;
+  width: 169px;
+  font-size: 20px;
+  font-family: 'poppins', sans-serif;
+  border: 1px solid  rgb(204, 213, 174) ;
+  border-radius: 15px;
+  transition: background-color 0.5s ease;
+}
+.aboutus-textdiv button:hover{
+  cursor: pointer;
+  background-color:rgb(224, 229, 182) ;
+  border-radius: 10px;
+  color: rgb(1, 77, 1);
+}
+
+
+@media (max-width: 1100px) {
+  .aboutus-mainDiv {
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center the elements */
+    margin: 10px;
+  }
+
+  /* Full-width image on mobile, no padding */
+  .image-aboutus {
+    width: 60%; /* Full width on mobile */
+    padding: 0; /* Remove padding */
+  }
+
+  .image-aboutus img {
+    border-radius: 0; /* No border radius on mobile */
+  }
+
+  /* Full-width text with less padding */
+  .aboutus-textdiv {
+    width: 90%; /* Full width on mobile */
+    padding: 0 10px; /* Reduced left/right padding */
+  }
+
+  /* Smaller heading and text sizes for mobile */
+  .aboutus {
+    font-size: 30px; /* Smaller heading font size */
+  }
+
+  .aboutus-text {
+    font-size: 16px; /* Smaller paragraph font size */
+    margin-bottom: 0;
+  }
+
+  /* Smaller button on mobile */
+  .aboutus-textdiv button { 
+    height: 30px;
+    width: 100px;
+    font-size: 10px;
+    border-radius: 10px; /* Slightly rounded corners for mobile */
+    margin-bottom: 10px;
+  }
+}
+
+
+.mission {
+  padding: 5% 10% 10% 10%;
+  text-align: center;
+background-color:rgb(224, 229, 182);
+}
+.mission h2 {
+  font-size: 30px;
+  background-color: rgb(224, 229, 182);
+}
+.mission p{
+  font-size: 30px;
+  background-color: rgb(224, 229, 182);
+}
+
+@media (max-width: 1100px) {
+  
+  .mission p{
+    font-size: 16px;
+  }
+  
+}
+.blogs {
+  display: flex;
+  flex-direction: column; /* Ensures vertical stacking inside blogs */
+  padding: 5% 5% 5% 5%;
+}
+
+.heading-blogs {
+  display: flex;
+  justify-content: space-between; /* Positions the h1 and button at opposite ends */
+  align-items: center; /* Aligns h1 and button vertically */
+  width: 100%;
+}
+
+.heading-blogs h1{
+  font-size: 67px;
+}
+.heading-blogs button{
+  font-family: 'poppins', sans-serif;
+  font-size: 20px;
+  height: 68px;
+  width: 210px;
+  border: 1px solid rgb(204, 213, 174); /* Border to match the title color */
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.5s ease; /* Controls the transition effect */
+} 
+
+.heading-blogs button:hover{
+cursor: pointer;
+background-color:rgb(224, 229, 182) ;
+border-radius: 10px;
+color: rgb(1, 77, 1);
+}
+.blogs-contents {
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;  
+}
+
+.blog-card {
+  padding: 10px;
+  border-radius: 15px;
+  width: 22%; /* Four items on one row */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
+  text-align: center;
+}
+.blog-card:hover{
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.title-blogs {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+}
+
+.info-blogs {
+  font-size: 26px;
+  text-align: left;
+}
+@media (max-width: 1100px) {
+  .heading-blogs{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+
+  .heading-blogs h1{
+    font-size: 30px;
+  }
+
+  .heading-blogs button{
+    margin-right: 20px;
+    font-size: 10px;
+    height:30px;
+    width: 100px;
+    border-radius: 10px; 
+  }
+  .blogs-contents {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-card {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 90%; /* Four items on one row */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
+    text-align: center;
+    border: 1px solid rgb(204, 213, 174);
+  }
+ 
+  .blog-card img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .title-blogs {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+  }
+  
+  .info-blogs {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+.check-symptoms {
+  display: flex;
+  flex-direction: column; /* To stack the elements vertically */
+  text-align: center; 
+  margin: 1rem;
+  padding: 70px 0 70px 0;
+  background-color:  rgb(250, 237, 206);
+}
+.check-symptoms h1{
+  background-color:  rgb(250, 237, 206);
+font-size: 61px;
+}
+.check-symptoms h6{
+  font-size: 20px;
+  padding: 20px 0 20px 0; 
+  font-weight: lighter;
+  background-color:  rgb(250, 237, 206);
+}
+
+.check-symptoms button{
+  height: 68px;
+  width: 143px;
+  border: 1px solid  rgb(204, 213, 174);
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  background-color:  rgb(250, 237, 206);
+  margin: auto; /* Centers the button within its container */
+  transition: background-color 0.5s ease; /* Controls the transition effect */
+}
+.check-symptoms a{
+  background-color:rgb(250, 237, 206);
+
+}
+.check-symptoms button:hover{
+  cursor: pointer;
+  background-color:rgb(224, 229, 182) ;
+  border-radius: 10px;
+  color: rgb(1, 77, 1);
+}
+
+@media (max-width: 1100px) {
+  .check-symptoms h1{
+    background-color:  rgb(250, 237, 206);
+  font-size: 30px;
+  }
+  .check-symptoms h6{
+    font-size: 16px;
+    padding: 20px 0 20px 0; 
+    font-weight: lighter;
+    background-color:  rgb(250, 237, 206);
+  }
+  
+  .check-symptoms button{
+    height: 58px;
+    width: 120px;
+    border: 1px solid  rgb(204, 213, 174);
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background-color:  rgb(250, 237, 206);
+    margin: auto; /* Centers the button within its container */
+    transition: background-color 0.5s ease; /* Controls the transition effect */
+  }
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-around; /* Distribute the items with space between */
+  padding: 20px; /* Optional padding */
+  background-color: #ccd5ae; 
+  font-family: 'Poppins', sans-serif;
+} 
+
+.footer-card {
+  width: fit-content;
+  text-align: left;
+  background-color: rgb(204, 213, 174); 
+  margin-top: 4rem;
+}
+
+.footer-card a{
+  display: block;
+  background-color: rgb(204, 213, 174); 
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-card p{
+  display: block;
+  background-color: transparent;
+  font-size: 18px;
+  color: black;
+}
+
+.footer-card h3{
+  display: block;
+  background-color: transparent;
+  margin-bottom: 1rem;
+  font-style: 'poppins';
+  font-size: 28px;
+}
+
+.footer-card span {
+  display: flex;
+  align-items: center; /* Align the icon and text vertically */
+  margin-bottom: 10px; /* Add space between each contact detail */
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  font-size: 16px; /* Adjust the font size if needed */
+  background-color: transparent;
+}
+
+.footer-card i {
+  margin-right: 15px; /* Add space between the icon and text */
+  font-size: 18px; /* Adjust the icon size if needed */
+  color: black; /* Adjust icon color */
+  background-color: transparent;
+}
+
+
+.footer-bottom {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(204, 213, 174); ;
+  padding: 3rem;
+  color: black;
+}
+.footer-bottom div{
+  background-color: rgb(204, 213, 174); 
+}
+.icons i{
+  background-color: rgb(254, 250, 224); 
+  border-radius: 50%;
+  padding: 6px;
+  margin-right: 3px;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.icons i:hover{
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px; /* Optional padding */
+    background-color: #ccd5ae; 
+    font-family: 'Poppins', sans-serif;
+  } 
+  
+  .footer-card {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(204, 213, 174); 
+    margin-top: 20px;
+  }
+  
+  .footer-card a{
+    display: block;
+    background-color: rgb(204, 213, 174); 
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .footer-card p{
+    display: block;
+    background-color: transparent;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .footer-card h3{
+    display: block;
+    background-color: transparent;
+    margin-bottom: 1px;
+    font-style: 'poppins';
+    font-size: 20px;
+  }
+  
+  .footer-card span {
+    display: flex;
+    align-items: center; /* Align the icon and text vertically */
+    justify-content: center; /* Center the content horizontally */
+    margin-bottom: 1px; /* Add space between each contact detail */
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 14px; /* Adjust the font size if needed */
+    background-color: transparent;
+  }
+  
+  .footer-card i {
+    margin-right: 15px; /* Add space between the icon and text */
+    font-size: 15px; /* Adjust the icon size if needed */
+    color: black; /* Adjust icon color */
+    background-color: transparent;
+  }
+  
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(204, 213, 174); ;
+    padding: 10px;
+    color: black;
+  }
+
+  .footer-bottom div{
+    background-color: rgb(204, 213, 174); 
+  }
+  .icons i{
+    background-color: rgb(254, 250, 224); 
+    border-radius: 50%;
+    padding: 6px;
+    margin-right: 3px;
+    margin-bottom: 2px;
+    margin-top: 4px;
+  }
+}

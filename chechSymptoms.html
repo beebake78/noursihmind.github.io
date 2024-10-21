@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Check Symptoms</title>
+    <link rel="stylesheet" href="checkSymptoms.css">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="navs">
+      <nav class="nav1">
+        <div class="webName" onclick="window.location.href='index.html';">
+          NourishMind
+        </div>
+        <div class="search-container">
+          <i class="fa fa-search"></i>
+          <!-- Add a search icon using Font Awesome or an SVG -->
+          <input
+            class="search-bar"
+            type="search"
+            placeholder="How can I help you?"
+          />
+        </div>
+
+        <div class="contact">
+          <a href="contactus.html">Contact a professional</a>
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button> <!-- Hamburger icon -->
+
+      </nav>
+
+      <nav class="nav2">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="chechSymptoms.html" id="CheckYourSymptoms">Check Your Symptoms</a>
+        <a href="contactus.html">Contact Us</a>
+      </nav>
+    </div>
+
+    <div class="title">
+      <h1>Do you have any Eating Disorder?</h1>
+    </div>
+
+    <div class="eatingDisorder">
+      <div class="disorder">
+        <input type="radio" id="anorexia" name="disorder" />
+        <label for="anorexia">
+          <img src="image\AN.webp" alt="Anorexia Nervosa image" />
+          <div class="text">Anorexia Nervosa</div>
+        </label>
+      </div>
+    
+      <div class="disorder">
+        <input type="radio" id="bulimia" name="disorder" />
+        <label for="bulimia">
+          <img src="image\BN.webp" alt="Bulimia Nervosa image" />
+          <div class="text">Bulimia Nervosa</div>
+        </label>
+      </div>
+    
+      <div class="disorder">
+        <input type="radio" id="bed" name="disorder" />
+        <label for="bed">
+          <img src="image\BED.webp" alt="BED image" />
+          <div class="text">Binge Eating Disorder (BED)</div>
+        </label>
+      </div>
+    
+      <div class="disorder">
+        <input type="radio" id="arfid" name="disorder" />
+        <label for="arfid">
+          <img src="image\AFRID.webp" alt="ARFID image" />
+          <div class="text">Avoidant / Restrictive Food Intake Disorder (ARFID)</div>
+        </label>
+      </div>
+    </div>
+    
+
+    <div class="question" id="Question1">1. Do you often worry about your weight or body shape?</div>
+    <div class="row">
+        <div class="label agree">Agree</div>
+        <div class="circle agree large" onclick="selectCircle(this)"></div>
+        <div class="circle agree medium" onclick="selectCircle(this)"></div>
+        <div class="circle agree small" onclick="selectCircle(this)"></div>
+        <div class="circle purple tiny" onclick="selectCircle(this)"></div>
+        <div class="circle disagree small" onclick="selectCircle(this)"></div>
+        <div class="circle disagree medium" onclick="selectCircle(this)"></div>
+        <div class="circle disagree large" onclick="selectCircle(this)"></div>
+        <div class="label disagree">Disagree</div>
+    </div>
+    <div class="question">2. Do you feel guilty or ashamed after eating?
+    </div>
+    <div class="row">
+        <div class="label agree">Agree</div>
+        <div class="circle agree large" onclick="selectCircle(this)"></div>
+        <div class="circle agree medium" onclick="selectCircle(this)"></div>
+        <div class="circle agree small" onclick="selectCircle(this)"></div>
+        <div class="circle purple tiny" onclick="selectCircle(this)"></div>
+        <div class="circle disagree small" onclick="selectCircle(this)"></div>
+        <div class="circle disagree medium" onclick="selectCircle(this)"></div>
+        <div class="circle disagree large" onclick="selectCircle(this)"></div>
+        <div class="label disagree">Disagree</div>
+    </div>
+    <div class="question">3. Do you frequently skip meals or severely limit the amount of food you eat?
+    </div>
+    <div class="row">
+        <div class="label agree">Agree</div>
+        <div class="circle agree large" onclick="selectCircle(this)"></div>
+        <div class="circle agree medium" onclick="selectCircle(this)"></div>
+        <div class="circle agree small" onclick="selectCircle(this)"></div>
+        <div class="circle purple tiny" onclick="selectCircle(this)"></div>
+        <div class="circle disagree small" onclick="selectCircle(this)"></div>
+        <div class="circle disagree medium" onclick="selectCircle(this)"></div>
+        <div class="circle disagree large" onclick="selectCircle(this)"></div>
+        <div class="label disagree">Disagree</div>
+    </div>
+    <div class="question">4. Do you engage in binge eating (eating large quantities of food in a short period)?
+    </div>
+    <div class="row">
+        <div class="label agree">Agree</div>
+        <div class="circle agree large" onclick="selectCircle(this)"></div>
+        <div class="circle agree medium" onclick="selectCircle(this)"></div>
+        <div class="circle agree small" onclick="selectCircle(this)"></div>
+        <div class="circle purple tiny" onclick="selectCircle(this)"></div>
+        <div class="circle disagree small" onclick="selectCircle(this)"></div>
+        <div class="circle disagree medium" onclick="selectCircle(this)"></div>
+        <div class="circle disagree large" onclick="selectCircle(this)"></div>
+        <div class="label disagree">Disagree</div>
+    </div>
+    <div class="question">5. Do you use methods like vomiting, laxatives, or excessive exercise to control your weight?    </div>
+    <div class="row">
+        <div class="label agree">Agree</div>
+        <div class="circle agree large" onclick="selectCircle(this)"></div>
+        <div class="circle agree medium" onclick="selectCircle(this)"></div>
+        <div class="circle agree small" onclick="selectCircle(this)"></div>
+        <div class="circle purple tiny" onclick="selectCircle(this)"></div>
+        <div class="circle disagree small" onclick="selectCircle(this)"></div>
+        <div class="circle disagree medium" onclick="selectCircle(this)"></div>
+        <div class="circle disagree large" onclick="selectCircle(this)"></div>
+        <div class="label disagree">Disagree</div>
+    </div>
+    <div class="question">6. Do you feel out of control when eating, especially during a binge?    </div>
+    <div class="row">
+        <div class="label agree">Agree</div>
+        <div class="circle agree large" onclick="selectCircle(this)"></div>
+        <div class="circle agree medium" onclick="selectCircle(this)"></div>
+        <div class="circle agree small" onclick="selectCircle(this)"></div>
+        <div class="circle purple tiny" onclick="selectCircle(this)"></div>
+        <div class="circle disagree small" onclick="selectCircle(this)"></div>
+        <div class="circle disagree medium" onclick="selectCircle(this)"></div>
+        <div class="circle disagree large" onclick="selectCircle(this)"></div>
+        <div class="label disagree">Disagree</div>
+    </div>
+    <div class="question">7. Are you preoccupied with food, calories, or dieting throughout the day?    </div>
+    <div class="row">
+        <div class="label agree">Agree</div>
+        <div class="circle agree large" onclick="selectCircle(this)"></div>
+        <div class="circle agree medium" onclick="selectCircle(this)"></div>
+        <div class="circle agree small" onclick="selectCircle(this)"></div>
+        <div class="circle purple tiny" onclick="selectCircle(this)"></div>
+        <div class="circle disagree small" onclick="selectCircle(this)"></div>
+        <div class="circle disagree medium" onclick="selectCircle(this)"></div>
+        <div class="circle disagree large" onclick="selectCircle(this)"></div>
+        <div class="label disagree">Disagree</div>
+    </div>
+    <div class="question">8. Do you avoid eating in front of others due to fear of judgment?    </div>
+    <div class="row">
+        <div class="label agree">Agree</div>
+        <div class="circle agree large" onclick="selectCircle(this)"></div>
+        <div class="circle agree medium" onclick="selectCircle(this)"></div>
+        <div class="circle agree small" onclick="selectCircle(this)"></div>
+        <div class="circle purple tiny" onclick="selectCircle(this)"></div>
+        <div class="circle disagree small" onclick="selectCircle(this)"></div>
+        <div class="circle disagree medium" onclick="selectCircle(this)"></div>
+        <div class="circle disagree large" onclick="selectCircle(this)"></div>
+        <div class="label disagree">Disagree</div>
+    </div>
+    <div class="question">9. Has your eating behavior impacted your social life, work, or school?    </div>
+    <div class="row">
+        <div class="label agree">Agree</div>
+        <div class="circle agree large" onclick="selectCircle(this)"></div>
+        <div class="circle agree medium" onclick="selectCircle(this)"></div>
+        <div class="circle agree small" onclick="selectCircle(this)"></div>
+        <div class="circle purple tiny" onclick="selectCircle(this)"></div>
+        <div class="circle disagree small" onclick="selectCircle(this)"></div>
+        <div class="circle disagree medium" onclick="selectCircle(this)"></div>
+        <div class="circle disagree large" onclick="selectCircle(this)"></div>
+        <div class="label disagree">Disagree</div>
+    </div>
+    <div class="question">10. Do you experience physical symptoms like dizziness, fatigue, or irregular periods as a result of your eating habits?
+    </div>
+    <div class="row" id="Question10-Row">
+        <div class="label agree">Agree</div>
+        <div class="circle agree large" onclick="selectCircle(this)"></div>
+        <div class="circle agree medium" onclick="selectCircle(this)"></div>
+        <div class="circle agree small" onclick="selectCircle(this)"></div>
+        <div class="circle purple tiny" onclick="selectCircle(this)"></div>
+        <div class="circle disagree small" onclick="selectCircle(this)"></div>
+        <div class="circle disagree medium" onclick="selectCircle(this)"></div>
+        <div class="circle disagree large" onclick="selectCircle(this)"></div>
+        <div class="label disagree">Disagree</div>
+    </div>
+
+    <div class="check-symptoms">
+      <a href="chechSymptoms.html" >
+        <button>View Your Results</button>
+      </a>
+    </div>
+    
+    <!-- <div class="button-container">
+      <button class="button">
+        <a href="/HTML/chechSymptoms.html">View Your Result</a>
+      </button>
+    </div> -->
+    
+    <script src="toogleMenu.js"> </script>
+    <script src="selectCircle.js"> </script>
+
+    <footer>
+      <div class="footer-card">
+        <h3>NourishMind</h3>
+        <!-- Changed title to h3 -->
+        <p>Nourish Your Mind,<br />Transform Your Life</p>
+      </div>
+
+      <div class="footer-card">
+        <h3>Links</h3>
+        <!-- Changed title to h3 -->
+        <a href="index.html"> Home</a>
+        <a href="aboutus.html"> About Us</a>
+        <a href="blog.html"> Informative Blogs</a>
+        <a href="chechSymptoms.html"> Check your symptoms</a>
+        <a href="contactus.html"> Contact Us </a>
+      </div>
+
+      <div class="footer-card" id="footer-card-contact">
+        <h3>Contact</h3>
+        <!-- Changed title to h3 -->
+        <span><i class="fa-solid fa-phone"></i> +14 5464 8272 </span>
+        <span
+          ><i class="fa-regular fa-envelope-open"></i>
+          nourishmind@gmail.com</span
+        >
+        <span
+          ><i class="fa-solid fa-location-crosshairs"></i> Putalisadak,
+          Kathmandu</span
+        >
+      </div>
+    </footer>
+
+    <div class="footer-bottom">
+      <div class="icons">
+        <i class="fa-brands fa-square-instagram" style="color: #000000"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+      <div>Terms and conditions</div>
+      <div>copyright 2023 @madat all right reserved</div>
+    </div>
+  </body>
+</html>

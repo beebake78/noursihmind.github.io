@@ -1,0 +1,480 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(254, 250, 224);
+  box-sizing: border-box; /* Ensure all elements respect padding and border in width */
+}
+body {
+  background-color: rgb(250, 237, 206);
+}
+
+#BLOG {
+  font-weight: bolder;
+}
+.navs {
+  display: flex;
+  flex-direction: column; /* Stacks nav1 and nav2 vertically */
+}
+/* Styling for nav1 (top navigation) */
+.nav1 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  /* background-color: rgb(204, 213, 174); */
+}
+
+.webName {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: bolder;
+  font-size: 48px;
+  transition: transform 0.6s ease; /* Smooth transition for the zoom effect */
+  color: rgb(51, 51, 51);
+}
+.webName:hover {
+  cursor: pointer;
+  transform: scale(1.1); /* Zooms the element to 110% of its original size */
+}
+
+.search-container {
+  position: relative;
+  width: 40%; /* Adjust the width as per your requirements */
+}
+
+.search-container i {
+  position: absolute;
+  left: 20px; /* Adjust distance from the left as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  color: black; /* Adjust color of the icon */
+  background-color: rgb(250, 237, 206);
+}
+
+.search-bar {
+  width: 100%;
+  height: 68px;
+  padding: 10px 10px 10px 60px; /* Increased padding-left to create more space between the text and icon */
+  border: 1px solid transparent;
+  border-radius: 20px;
+  box-sizing: border-box; /* Include padding in the width */
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  background-color: rgb(250, 237, 206);
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: rgb(204, 213, 174); /* Optional: Change border color on focus */
+}
+
+.contact a {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  border: 1.5px, solid, rgb(204, 213, 174);
+  border-radius: 15px;
+  height: 68px;
+  width: 276px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.5s ease; /* Controls the transition effect */
+}
+
+.contact :hover {
+  cursor: pointer;
+  background-color: rgb(224, 229, 182);
+  border-radius: 10px;
+  color: rgb(1, 77, 1);
+}
+
+/* Styling for nav2 (bottom navigation) */
+.nav2 {
+  display: flex;
+  justify-content: left;
+  padding-left: 5.5%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  /* background-color: rgb(224, 229, 182); */
+}
+
+.nav2 a {
+  margin-right: 60px;
+  text-decoration: none;
+  color: black;
+  font-family: "poppins", sans-serif;
+  font-size: 20px;
+  /* background-color: rgb(224, 229, 182); */
+}
+
+.nav2 a:hover {
+  color: black;
+  /* font-weight: bold; */
+  transition: transform 1s ease; /* Smooth transition for the zoom effect */
+  transform: scale(1.1); /* Zooms the element to 110% of its original size */
+}
+
+.hamburger {
+  display: none; /* Hidden by default, will show in mobile view using media queries */
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  position: absolute; /* Positioning it at the top left */
+  left: 20px; /* Adjust this value to position it exactly at the left corner */
+  top: 20px; /* Adjust this value to position it from the top */
+}
+/* Mobile Styles */
+@media (max-width: 1100px) {
+  .nav1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    font-size: 15px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .webName {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .contact a {
+    display: flex;
+    padding: 10px;
+    font-size: 16px;
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger button {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
+  .nav2 {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav2.active {
+    display: flex; /* Show links when active */
+  }
+
+  .nav2 a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+}
+.title-blog {
+  height: 320px;
+  display: block;
+  background-color: rgb(250, 237, 206);
+}
+
+.go-back-link {
+  display: inline-flex; /* To align icon and text */
+  align-items: center;
+  justify-content: center;
+  height: 68px;
+  width: 200px; /* Adjust width to fit content */
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 10%;
+  background-color: rgb(250, 237, 206);
+  border: 1px solid rgb(204, 213, 174);
+  border-radius: 15px;
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use the inherited text color */
+  cursor: pointer;
+  gap: 10px; /* Add space between the arrow and text */
+}
+
+.title-blog h1 {
+  font-size: 60px;
+  font-family: "Abhaya Libre", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(250, 237, 206);
+  position: relative; /* Establishes a positioning context for the pseudo-element */
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* Adjust the thickness of the underline */
+  text-underline-offset: 10px; /* Adjust the gap between the text and the underline */
+}
+
+.Anorexia-image {
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /* Horizontally center the image */
+  align-items: center; /* Vertically center the image */
+  height: 455px; /* Adjust the height as needed */
+  background-color: rgb(250, 237, 206); /* Optional: Set a background color */
+  overflow: hidden; /* Hide any overflow */
+  width: 1243px; /* Set the width to viewport width to prevent overflow */
+  margin: 0 auto; /* Center the container if there are additional margins */
+}
+
+.Anorexia-image img {
+  width: 100%; /* Set the width to 100% of the parent container */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover; /* Ensure the image covers the div properly */
+  border-radius: 10px; /* Add rounded corners if desired */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Optional: add a shadow to the image */
+}
+
+@media (max-width: 1100px) {
+  .title-blog {
+    height: fit-content;
+  }
+  .go-back-link {
+    height: 28px;
+    width: 100px; /* Adjust width to fit content */
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    border-radius: 10px;
+    gap: 8px; /* Add space between the arrow and text */
+  }
+  .title-blog h1 {
+    font-size: 30px;
+    text-decoration-thickness: 1px; /* Adjust the thickness of the underline */
+    text-underline-offset: 5px; /* Adjust the gap between the text and the underline */
+  }
+  .Anorexia-image {
+    padding: 15px;
+    align-items: center; /* Vertically center the image */
+    height: 100%; /* Adjust the height as needed */
+    width: fit-content; /* Set the width to viewport width to prevent overflow */
+  }
+}
+
+.details {
+  height: fit-content;
+  width: 1243px;
+  display: flex; /* Use flexbox to align elements */
+  justify-content: center; /* Center the elements horizontally */
+  margin: 0 auto; /* Center the entire container within its parent */
+  flex-direction: column; /* Stack elements vertically if needed */
+  text-align: left;
+  background-color: rgb(250, 237, 206);
+  padding-top: 30px;
+}
+.details-details {
+  margin-top: 30px;
+  background-color: rgb(250, 237, 206);
+}
+.details-details h3 {
+  font-size: 30px;
+  font-family: "poppins", sans-serif;
+  background-color: rgb(250, 237, 206);
+}
+.details-details p {
+  font-size: 24px;
+  font-family: "poppins", sans-serif;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgb(250, 237, 206);
+}
+@media (max-width: 1100px) {
+  .details {
+    padding-left: 25px;
+    padding-right: 25px;
+    height: fit-content;
+    width: fit-content;
+    text-align: left;
+    padding-top: 20px;
+  }
+  .details-details {
+    margin-top: 20px;
+    background-color: rgb(250, 237, 206);
+  }
+  .details-details h3 {
+    font-size: 16px;
+  }
+  .details-details p {
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+footer {
+  display: flex;
+  justify-content: space-around; /* Distribute the items with space between */
+  padding: 20px; /* Optional padding */
+  background-color: #ccd5ae;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-card {
+  width: fit-content;
+  text-align: left;
+  background-color: rgb(204, 213, 174);
+  margin-top: 4rem;
+}
+
+.footer-card a {
+  display: block;
+  background-color: rgb(204, 213, 174);
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-card p {
+  display: block;
+  background-color: transparent;
+  font-size: 18px;
+  color: black;
+}
+
+.footer-card h3 {
+  display: block;
+  background-color: transparent;
+  margin-bottom: 1rem;
+  font-style: "poppins";
+  font-size: 28px;
+}
+
+.footer-card span {
+  display: flex;
+  align-items: center; /* Align the icon and text vertically */
+  margin-bottom: 10px; /* Add space between each contact detail */
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 16px; /* Adjust the font size if needed */
+  background-color: transparent;
+}
+
+.footer-card i {
+  margin-right: 15px; /* Add space between the icon and text */
+  font-size: 18px; /* Adjust the icon size if needed */
+  color: black; /* Adjust icon color */
+  background-color: transparent;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(204, 213, 174);
+  padding: 3rem;
+  color: black;
+}
+.footer-bottom div {
+  background-color: rgb(204, 213, 174);
+}
+.icons i {
+  background-color: rgb(254, 250, 224);
+  border-radius: 50%;
+  padding: 6px;
+  margin-right: 3px;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.icons i:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px; /* Optional padding */
+    background-color: #ccd5ae;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .footer-card {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(204, 213, 174);
+    margin-top: 20px;
+  }
+
+  .footer-card a {
+    display: block;
+    background-color: rgb(204, 213, 174);
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .footer-card p {
+    display: block;
+    background-color: transparent;
+    font-size: 14px;
+    color: black;
+  }
+
+  .footer-card h3 {
+    display: block;
+    background-color: transparent;
+    margin-bottom: 1px;
+    font-style: "poppins";
+    font-size: 20px;
+  }
+
+  .footer-card span {
+    display: flex;
+    align-items: center; /* Align the icon and text vertically */
+    justify-content: center; /* Center the content horizontally */
+    margin-bottom: 1px; /* Add space between each contact detail */
+    font-family: "Poppins", sans-serif;
+    color: black;
+    font-size: 14px; /* Adjust the font size if needed */
+    background-color: transparent;
+  }
+
+  .footer-card i {
+    margin-right: 15px; /* Add space between the icon and text */
+    font-size: 15px; /* Adjust the icon size if needed */
+    color: black; /* Adjust icon color */
+    background-color: transparent;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(204, 213, 174);
+    padding: 10px;
+    color: black;
+  }
+
+  .footer-bottom div {
+    background-color: rgb(204, 213, 174);
+  }
+  .icons i {
+    background-color: rgb(254, 250, 224);
+    border-radius: 50%;
+    padding: 6px;
+    margin-right: 3px;
+    margin-bottom: 2px;
+    margin-top: 4px;
+  }
+}
